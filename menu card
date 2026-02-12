@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechFest 2026 Registration - Symbiosis International University</title>
+
+<!-- Google Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Material+Icons" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Roboto', sans-serif;
+}
+
+body{
+    background-color: #FFFFF0; /* ivory */
+    color:#333;
+}
+
+header{
+    text-align:center;
+    padding: 30px 20px;
+    background-color: #87CEEB; /* sky blue */
+    color:white;
+    position: relative;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+header img{
+    width: 80px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+header h1{
+    font-size:32px;
+}
+
+header p{
+    margin-top:5px;
+    font-size:16px;
+}
+
+main{
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.image-banner{
+    width: 100%;
+    height: 220px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.image-banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Form Grid */
+form{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 20px;
+}
+
+/* Card Fields */
+.card-field{
+    padding:15px 20px;
+    border-radius:12px;
+    background-color:white;
+    color:#333;
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-field:hover{
+    transform: translateY(-5px);
+}
+
+.card-field label{
+    font-weight:500;
+    margin-bottom:8px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+    color: #00509d; /* darker sky blue for labels */
+}
+
+.card-field input, 
+.card-field select,
+.card-field textarea{
+    width:100%;
+    padding:10px 12px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:14px;
+    margin-top:5px;
+}
+
+.card-field input[type="submit"]{
+    grid-column:1 / -1;
+    background-color:#87CEEB; /* sky blue */
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+    padding:12px 0;
+    transition:0.3s ease;
+    border-radius:8px;
+}
+
+.card-field input[type="submit"]:hover{
+    background-color:#63b8f1; /* slightly darker sky blue on hover */
+}
+
+textarea{
+    resize: none;
+}
+
+.material-icons{
+    color:#87CEEB; /* sky blue icons */
+}
+
+p.note{
+    font-size:12px;
+    color:#666;
+}
+
+@media(max-width:600px){
+    header h1{
+        font-size:24px;
+    }
+    header img{
+        width:60px;
+        top:10px;
+        left:10px;
+    }
+    form{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <img src="https://upload.wikimedia.org/wikipedia/en/1/10/Symbiosis_International_University_logo.png" alt="Symbiosis Logo">
+    <h1>Symbiosis International University</h1>
+    <p>TechFest 2026 - Online Registration</p>
+</header>
+
+<main>
+    <div class="image-banner">
+        <img src="https://www.sibmnagpur.edu.in/wp-content/uploads/2025/12/SIBM-NAGPUR-Photograph-1-1024x409.jpg" alt="SIBM Nagpur Banner">
+    </div>
+
+    <form action="#" method="post">
+        <div class="card-field">
+            <label for="fullname"><span class="material-icons">person</span> Full Name *</label>
+            <input type="text" id="fullname" name="fullname" required placeholder="Your full name">
+        </div>
+
+        <div class="card-field">
+            <label for="email"><span class="material-icons">email</span> Email *</label>
+            <input type="email" id="email" name="email" required placeholder="yourname@example.com">
+        </div>
+
+        <div class="card-field">
+            <label for="phone"><span class="material-icons">call</span> Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Enter 10-digit number" pattern="[0-9]{10}">
+        </div>
+
+        <div class="card-field">
+            <label for="college"><span class="material-icons">school</span> College Name *</label>
+            <input type="text" id="college" name="college" value="Symbiosis International University" readonly>
+        </div>
+
+        <div class="card-field">
+            <label for="year"><span class="material-icons">menu_book</span> Year of Study *</label>
+            <select id="year" name="year" required>
+                <option value="">Select year</option>
+                <option value="1st">1st Year</option>
+                <option value="2nd">2nd Year</option>
+                <option value="3rd">3rd Year</option>
+                <option value="4th">4th Year</option>
+            </select>
+        </div>
+
+        <div class="card-field">
+            <label for="events"><span class="material-icons">event</span> Select Events *</label>
+            <select id="events" name="events[]" multiple required>
+                <option value="coding">Coding Challenge</option>
+                <option value="robotics">Robotics</option>
+                <option value="tech-quiz">Tech Quiz</option>
+                <option value="workshop">Workshops</option>
+                <option value="gaming">Gaming</option>
+            </select>
+        </div>
+
+        <div class="card-field">
+            <label for="remarks"><span class="material-icons">notes</span> Additional Remarks</label>
+            <textarea id="remarks" name="remarks" rows="4" placeholder="Any preferences or notes..."></textarea>
+        </div>
+
+        <div class="card-field">
+            <input type="submit" value="Register Now">
+        </div>
+    </form>
+</main>
+
+</body>
+</html>
